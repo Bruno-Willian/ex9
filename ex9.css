@@ -1,0 +1,16 @@
+
+#carouselExampleIndicators{
+    align-items: center;
+    margin-top: 2em;
+}
+
+.modals {
+
+
+    width: 95%;
+    text-align: center;
+    display: inline-block;
+    flex-direction: column;
+    margin: 1em;
+   
+  }

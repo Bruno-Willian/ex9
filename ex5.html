@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Assentar Piso</h1>
+
+    <script>
+        function exibir() {
+
+            var C = parseFloat(document.getElementById('Comprimento').value)
+            var L = parseFloat(document.getElementById('Largura').value)
+            var Cpiso = parseFloat(document.getElementById('Cp').value)
+            var Lpiso = parseFloat(document.getElementById('Lp').value)
+            var ValorCL = (C * L)*36
+            var ValorPiso = (Cpiso/100) * (Lpiso/100)
+            var Pecas = ValorCL / ValorPiso
+            var Quebra = Pecas * 0.1 
+            var ValorT = Pecas + Quebra
+            
+            document.getElementById('res').innerHTML = ValorT + " Reais";
+
+        }
+
+    </script>
+
+    <form action="" method="post">
+        Digite o comprimento do cômodo: <input type="number" id="Comprimento"> <br>
+        Digite a largura do cômodo: <input type="number" id="Largura"> <br>
+        Digite o comprimento do Piso <input type="number" id="Cp"> <br>
+        Digite a largura do Piso <input type="number" id="Lp"> <br>
+        <input type="button" value="Mostrar" onclick="exibir()">
+        <input type="button" value="Limpar" onclick="window.location.reload()">
+    </form>
+
+
+    <h4 id="res"></h4>
+</body>
+
+</html>

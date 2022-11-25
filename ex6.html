@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Descobrir Peso</h1>
+    <script>
+        function exibir() {
+            var Sex = (document.getElementById('Sexo').value)
+            var h = parseFloat(document.getElementById('Altura').value)
+            if (Sex == "Masculino") {
+               var Total =  (72.7 * h) - 58
+            }else{
+               var Total = (62.1*h) - 44.7 
+            }
+            document.getElementById('res').innerHTML = "O peso " +Sex + ' é ' +Total;
+        }
+    </script>
+    <form action="" method="post">
+        Digite a altura da pessoa <input type="text" id="Altura"> <br>
+        Dgite o sexo da pessoa: Feminio ou Masculino<input type="text" id="Sexo"> <br>
+        <input type="button" value="Mostrar" onclick="exibir()">
+        <input type="button" value="Limpar" onclick="window.location.reload()">
+    </form>
+    <div id="res"></div>
+</body>
+
+</html>

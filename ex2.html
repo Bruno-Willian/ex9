@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=scr, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+        function exibir() {
+            var far = parseFloat(document.getElementById('far').value)
+            var cel = (far-32) * 5/9
+            document.getElementById('res').innerHTML = cel   
+            try{
+                if(isNaN(far)) throw "Valor inválido";
+            }catch (error){
+                document.getElementById('res').innerHTML = ("Valor Inválido")
+            }
+            }
+
+            function exibir1() {
+            var cel = parseFloat(document.getElementById('cel').value)
+            var far = cel*1.8 +32 
+            document.getElementById('res2').innerHTML = far   
+            try{
+                if(isNaN(cel)) throw "Valor inválido";
+            }catch (error){
+                document.getElementById('res2').innerHTML = ("Valor Inválido")
+            }
+            }
+
+    </script>
+    
+    <h1> Conversor Fahrenheith para Celsius</h1>
+
+    <form action="" method="post">
+        <input type="text" placeholder="Digite a temperatura em F" id="far">
+        <input type="button" value="Converter" onclick="exibir()">
+        <input type="button" value="Limpar" onclick="window.location.reload()">
+    </form>
+    <h1> Conversor Celsius para Fahrenheith</h1>
+
+    <form action="" method="post">
+        <input type="text" placeholder="Digite a temperatura em C" id="cel">
+        <input type="button" value="Converter" onclick="exibir1()">
+        <input type="button" value="Limpar" onclick="window.location.reload()">
+    </form>
+    <h1 id="res"></h1>
+    <h1 id="res2"></h1>
+</body>
+
+</html>
